@@ -1,4 +1,6 @@
 
+
+import 'package:acvmxhomepage/widgetPage.dart';
 import 'package:flutter/material.dart';
 
 import 'FoodPage.dart';
@@ -15,7 +17,7 @@ class WhatsAppUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home : Foodpage(),
+      home : widgetPage(),
     );
   }
 }
