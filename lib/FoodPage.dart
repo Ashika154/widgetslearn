@@ -161,18 +161,7 @@ class Foodpage extends StatelessWidget {
               ),
 
 
-            );
-
-
-
-        }
-
-
-        ),
-
-
-
-      ),
+            );}),),
     );
 
   }
