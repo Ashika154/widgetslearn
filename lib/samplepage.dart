@@ -1,3 +1,4 @@
+import 'package:acvmxhomepage/drag.dart';
 import 'package:flutter/material.dart';
 
 class Samplepage extends StatefulWidget {
@@ -239,7 +240,10 @@ class _SamplepageState extends State<Samplepage> {
             
                   ),
                 ),
-                Center(child: ElevatedButton(onPressed: (){}, child: Text("submit")))
+                Center(child: ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> MainPage()));
+
+                }, child: Text("next")))
             
               ],
             ),
