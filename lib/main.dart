@@ -1,13 +1,12 @@
 
-
-
 import 'package:acvmxhomepage/Samplepage.dart';
 import 'package:acvmxhomepage/drag.dart';
 import 'package:acvmxhomepage/widgetPage.dart';
 import 'package:flutter/material.dart';
 
 import 'FoodPage.dart';
-import 'newui.dart';
+import 'new.dart';
+
 
 void main() {
   runApp(const WhatsAppUI());
