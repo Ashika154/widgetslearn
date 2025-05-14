@@ -18,15 +18,17 @@ class _MainPageState extends State<MainPage> {
     if (item.toLowerCase().contains("hot")) {
       return isSwitched;
     } else if (item.toLowerCase().contains("cold")) {
-      return isSwitch;
+            return isSwitch;
     }
-    return true;
+         return true;
   }
 
   Stream<int> liveOrderCount() async* {
     int count = 50;
     while (true) {
+
       await Future.delayed(Duration(seconds: 1));
+
       yield count++;
     }
   }
@@ -37,6 +39,7 @@ class _MainPageState extends State<MainPage> {
       data: ThemeData(primarySwatch: Colors.brown),
       child: Scaffold(
         body: LayoutBuilder(
+
           builder: (context, constraints) {
             return CustomScrollView(
               slivers: [
