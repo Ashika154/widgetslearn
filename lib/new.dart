@@ -1,53 +1,49 @@
 import 'package:flutter/material.dart';
 
+class ColorChange extends StatefulWidget {
+  const ColorChange({super.key});
 
-
-class colorchange extends StatefulWidget {
   @override
-  _colorchangeState createState() => _colorchangeState();
+  _ColorChangeState createState() => _ColorChangeState();
 }
 
-class _colorchangeState extends State<colorchange> {
+class _ColorChangeState extends State<ColorChange> {
   int selectedIndex = -1;
 
+  final List<Color> tileColors = [
+    Colors.greenAccent,
+    Colors.redAccent,
+    Colors.purpleAccent,
+    Colors.blueAccent,
+    Colors.grey,
+  ];
+
+  final List<String> tileLabels = [
+    'Green',
+    'Red',
+    'Purple',
+    'Blue',
+    'Grey',
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(' Change Color')),
-      body: Column(
-        children: [
-          ListTile(title: Text('yellow'),
-            tileColor: selectedIndex == 0 ? Colors.greenAccent : null,
+      appBar: AppBar(title: Text('Change Tile Color')),
+      body: ListView.builder(
+        itemCount: tileLabels.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(tileLabels[index]),
+            tileColor: selectedIndex == index ? tileColors[index] : null,
             onTap: () {
               setState(() {
-                  selectedIndex = 0;
+                selectedIndex = index;
               });
             },
-          ),
-          ListTile(title: Text('red'),
-            tileColor: selectedIndex == 1 ? Colors.red[200] : null,
-            onTap: () {
-              setState(() {
-                   selectedIndex = 1;
-              });
-            },
-          ),
-          ListTile(
-               title: Text('purple'),
-            tileColor: selectedIndex == 2 ? Colors.purpleAccent[100] : null,
-            onTap: () {
-              setState(() {selectedIndex = 2;
-              });
-            },
-          ),
-          ListTile(
-            title: Text('blue'),
-              tileColor: selectedIndex == 3 ? Colors.blue : null,
-            onTap: () {
-              setState(() {selectedIndex = 3;
-              });
-            },
-          ),],
-      ),);}
+          );
+        },
+      ),
+    );
+  }
 }

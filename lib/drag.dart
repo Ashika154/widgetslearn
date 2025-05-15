@@ -53,7 +53,7 @@ class _MainPageState extends State<MainPage> {
                       child: Container(),
                     ),
                   ),
-                  leading: Icon(Icons.arrow_back_ios_new),
+                  leading: Icon(Icons.arrow_back_ios_new_rounded),
                   centerTitle: true,
                   backgroundColor: Color(0xFFA1887F),
                 ),
